@@ -11,14 +11,9 @@ import Calc from "./components/pages/Calculator";
 import Report from "./components/pages/Report";
 import FourOhFour from "./components/pages/404";
 import Navigation from "./components/core/Navigation";
-import { fetchLoggedInUser } from "./actions/me";
+//import { fetchLoggedInUser } from "./actions/me";
 
 class App extends Component {
-  componentWillMount() {
-    const { dispatch } = this.props;
-    dispatch(fetchLoggedInUser("self"));
-  }
-
   render() {
     return (
       <BrowserRouter>
@@ -47,14 +42,4 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  const { me } = state;
-  return {
-    me
-  };
-};
-
-export default connect(
-  mapStateToProps,
-  null
-)(App);
+export default connect(null)(App);

@@ -1,7 +1,7 @@
 {
   "name": "ies_tm30_web_app",
   "version": "0.1.0",
-  "homepage": "https://isaiaher.github.io/tm30_react/home",
+  "homepage": "https://isaiaher.github.io/tm30_react/",
   "private": true,
   "dependencies": {
     "axios": "^0.19.0",

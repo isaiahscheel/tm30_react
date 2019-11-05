@@ -6,16 +6,33 @@ import NavItem from "pnnl-react-core/lib/NavItem";
 const Navigation = () => (
   <NavBar>
     <Col sm={1} componentClass="ul">
-      <NavItem to="/" icon="home" text="Home" onlyActiveOnIndex />
+      <NavItem
+        to="https://isaiaher.github.io/tm30_react/"
+        icon="home"
+        text="Home"
+        onlyActiveOnIndex
+      />
     </Col>
     <Col sm={1} componentClass="ul">
-      <NavItem to="/calc" icon="software" text="Calculator" />
+      <NavItem
+        to="https://isaiaher.github.io/tm30_react/calc"
+        icon="software"
+        text="Calculator"
+      />
     </Col>
     <Col sm={1} componentClass="ul">
-      <NavItem to="/Report" icon="report" text="Report" />
+      <NavItem
+        to="https://isaiaher.github.io/tm30_react/Report"
+        icon="report"
+        text="Report"
+      />
     </Col>
     <Col sm={1} componentClass="ul">
-      <NavItem to="/Profile" icon="person" text="Profile" />
+      <NavItem
+        to="https://isaiaher.github.io/tm30_react/Profile"
+        icon="person"
+        text="Profile"
+      />
     </Col>
   </NavBar>
 );

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { HashRouter, Route, Link } from "react-router-dom";
+import { HashRouter, Route, Link, Switch } from "react-router-dom";
 import Grid from "react-bootstrap/es/Grid";
 import Header from "pnnl-react-core/lib/Header";
 //import WebFooter from "pnnl-react-core/lib/WebFooter";

@@ -1,0 +1,491 @@
+import React, { Component } from "react";
+import Table from "react-bootstrap/es/Table";
+import Grid from "react-bootstrap/es/Grid";
+import Row from "react-bootstrap/es/Row";
+import Col from "react-bootstrap/es/Col";
+import Card from "pnnl-react-core/lib/Card";
+
+export class Numerical extends Component {
+  constructor(props) {
+    super(props);
+    this.tm30 = this.props.tm30;
+
+    this.lcs = [];
+    this.lhs = [];
+    this.lcf = [];
+    this.lcs_lhs_lcf = [];
+    this.sample_count = [];
+    this.atest = [];
+    this.btest = [];
+    this.aref = [];
+    this.bref = [];
+    this.da = [];
+    this.db = [];
+    this.pathxref = [];
+    this.pathyref = [];
+    this.pathxtest = [];
+    this.pathytest = [];
+    this.ces = [];
+    this.color_sample_fidelity = [];
+    this.j_test_coordinates = [];
+    this.a_test_coordinates = [];
+    this.b_test_coordinates = [];
+    this.j_ref_coordinates = [];
+    this.a_ref_coordinates = [];
+    this.b_ref_coordinates = [];
+    this.hue_angle_bin = [];
+
+    this.colors = [
+      "#b45c60",
+      "#cb7761",
+      "#cb824b",
+      "#d7ad67",
+      "#ac9a5d",
+      "#919E60",
+      "#678B5F",
+      "#62B08F",
+      "#7CBABA",
+      "#2C797D",
+      "#54778C",
+      "#7189B1",
+      "#988CA9",
+      "#735876",
+      "#8F6682",
+      "#B97B8E"
+    ];
+
+    var i;
+    for (i = 0; i < 16; i++) {
+      this.lcs.push(Math.round(this.tm30.local_chroma_shift[i]));
+      this.lhs.push(Math.round(this.tm30.local_hue_shift[i] * 100) / 100);
+      this.lcf.push(Math.round(this.tm30.local_color_fidelity[i]));
+      this.sample_count.push(this.tm30.sample_count[i]);
+      this.atest.push(Math.round(this.tm30.a_prime_test_j[i] * 100) / 100);
+      this.btest.push(Math.round(this.tm30.b_prime_test_j[i] * 100) / 100);
+      this.aref.push(Math.round(this.tm30.a_prime_ref_j[i] * 100) / 100);
+      this.bref.push(Math.round(this.tm30.b_prime_ref_j[i] * 100) / 100);
+      this.da.push(Math.round(this.tm30.da_relative[i] * 100) / 100);
+      this.db.push(Math.round(this.tm30.db_relative[i] * 100) / 100);
+      this.pathxref.push(Math.round(this.tm30.path_xref[i] * 100) / 100);
+      this.pathyref.push(Math.round(this.tm30.path_yref[i] * 100) / 100);
+      this.pathxtest.push(Math.round(this.tm30.path_xtest[i] * 100) / 100);
+      this.pathytest.push(Math.round(this.tm30.path_ytest[i] * 100) / 100);
+
+      this.lcs_lhs_lcf.push(
+        <tr>
+          <td style={{ "background-color": this.colors[i] }}>
+            <b>{i + 1}</b>
+          </td>
+          <td>{this.lcs[i]}%</td>
+          <td>{this.lhs[i]}</td>
+          <td>{this.lcf[i]}</td>
+          <td>{this.sample_count[i]}</td>
+          <td>{this.atest[i]}</td>
+          <td>{this.btest[i]}</td>
+          <td>{this.aref[i]}</td>
+          <td>{this.bref[i]}</td>
+          <td>{this.da[i]}</td>
+          <td>{this.db[i]}</td>
+          <td>{this.pathxref[i]}</td>
+          <td>{this.pathyref[i]}</td>
+          <td>{this.pathxtest[i]}</td>
+          <td>{this.pathytest[i]}</td>
+        </tr>
+      );
+    }
+
+    for (i = 0; i < 99; i++) {
+      //CES
+      this.color_sample_fidelity.push(
+        Math.round(this.tm30.color_sample_fidelity[i])
+      );
+      this.j_test_coordinates.push(
+        Math.round(this.tm30.j_test_coordinates[i] * 100) / 100
+      );
+      this.a_test_coordinates.push(
+        Math.round(this.tm30.a_test_coordinates[i] * 100) / 100
+      );
+      this.b_test_coordinates.push(
+        Math.round(this.tm30.b_test_coordinates[i] * 100) / 100
+      );
+      this.j_ref_coordinates.push(
+        Math.round(this.tm30.j_ref_coordinates[i] * 100) / 100
+      );
+      this.a_ref_coordinates.push(
+        Math.round(this.tm30.a_ref_coordinates[i] * 100) / 100
+      );
+      this.b_ref_coordinates.push(
+        Math.round(this.tm30.b_ref_coordinates[i] * 100) / 100
+      );
+      this.hue_angle_bin.push(this.tm30.hue_angle_bin[i]);
+
+      this.ces.push(
+        <tr>
+          <Col xs={2}>
+            <td>CES{i + 1 < 10 ? `0${i + 1}` : i + 1}</td>
+          </Col>
+          <Col xs={2}>
+            <td>{this.color_sample_fidelity[i]}</td>
+          </Col>
+          <Col xs={3}>
+            <td>{this.j_test_coordinates[i]}</td>
+            <td>{this.a_test_coordinates[i]}</td>
+            <td>{this.b_test_coordinates[i]}</td>
+          </Col>
+          <Col xs={3}>
+            <td>{this.j_ref_coordinates[i]}</td>
+            <td>{this.a_ref_coordinates[i]}</td>
+            <td>{this.b_ref_coordinates[i]}</td>
+          </Col>
+          <Col xs={2}>
+            <td>{this.hue_angle_bin[i]}</td>
+          </Col>
+        </tr>
+      );
+    }
+  }
+  render() {
+    return (
+      <div>
+        <Grid fluid={true}>
+          <h2 align="center">Color Rendition Global Averages </h2>
+          <Row>
+            <Col xs={2}></Col>
+            <Col xs={8}>
+              <Table striped bordered hover>
+                <thead>
+                  <tr>
+                    <th>
+                      Fidelity Index <hr /> R<sub>f</sub>
+                    </th>
+                    <th>
+                      Gamut Index <hr /> R<sub>g</sub>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>{Math.round(this.tm30.rf)}</td>
+                    <td>{Math.round(this.tm30.rg)}</td>
+                  </tr>
+                </tbody>
+              </Table>
+            </Col>
+            <Col xs={2}></Col>
+          </Row>
+          <Row>
+            <h2 align="center">Color Rendition Local Averages </h2>
+            <Card>
+              <Table striped bordered hover>
+                <thead>
+                  <tr>
+                    <th>
+                      Hue-Angle Bin <hr /> <i>j</i>
+                    </th>
+                    <th align="center">
+                      Local Chroma Shift <hr /> R
+                      <sub>
+                        cs,h<i>j</i>
+                      </sub>
+                    </th>
+                    <th>
+                      Local Hue Shift <hr /> R
+                      <sub>
+                        hs,h<i>j</i>
+                      </sub>
+                    </th>
+                    <th>
+                      Local Color Fidelity <hr /> R
+                      <sub>
+                        f,h<i>j</i>
+                      </sub>
+                    </th>
+                    <th>
+                      Sample Count <hr /> <i>m</i>
+                    </th>
+                    <th colSpan="2">
+                      Test Coordinates <hr />{" "}
+                      <Col xs={6}>
+                        <i>
+                          a'
+                          <sub>test,j</sub>
+                        </i>{" "}
+                      </Col>
+                      <Col xs={6}>
+                        <i>
+                          b'<sub>test,j</sub>
+                        </i>
+                      </Col>
+                    </th>
+                    <th colSpan="2">
+                      Reference Coordinates <hr />{" "}
+                      <Col xs={6}>
+                        <i>
+                          a'
+                          <sub>ref,j</sub>
+                        </i>{" "}
+                      </Col>
+                      <Col xs={6}>
+                        <i>
+                          b'<sub>ref,j</sub>
+                        </i>
+                      </Col>
+                    </th>
+                    <th colSpan="6">
+                      Reference Coordinates <hr /> <Col xs={2}>da relative</Col>
+                      <Col xs={2}>db relative</Col>
+                      <Col xs={2}>path_x ref</Col>
+                      <Col xs={2}>path_y ref</Col>
+                      <Col xs={2}>path_x test</Col>
+                      <Col xs={2}>path_y test</Col>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {this.lcs_lhs_lcf[0]}
+                  {this.lcs_lhs_lcf[1]}
+                  {this.lcs_lhs_lcf[2]}
+                  {this.lcs_lhs_lcf[3]}
+                  {this.lcs_lhs_lcf[4]}
+                  {this.lcs_lhs_lcf[5]}
+                  {this.lcs_lhs_lcf[6]}
+                  {this.lcs_lhs_lcf[7]}
+                  {this.lcs_lhs_lcf[8]}
+                  {this.lcs_lhs_lcf[9]}
+                  {this.lcs_lhs_lcf[10]}
+                  {this.lcs_lhs_lcf[11]}
+                  {this.lcs_lhs_lcf[12]}
+                  {this.lcs_lhs_lcf[13]}
+                  {this.lcs_lhs_lcf[14]}
+                  {this.lcs_lhs_lcf[15]}
+                </tbody>
+              </Table>
+            </Card>
+          </Row>
+          <h2 align="center">
+            Color Rendition of Color Evaluation Samples (CES)
+          </h2>
+          <Row noGutters={true}>
+            <Card>
+              <Table
+                className="table-fixed"
+                overflow="scroll"
+                striped
+                bordered
+                hover
+              >
+                <thead>
+                  <tr>
+                    <Col xs={2}>
+                      <th width="100%">
+                        Sample
+                        <hr /> <i>i</i>
+                      </th>
+                    </Col>
+                    <Col xs={2}>
+                      <th width="100%">
+                        Color Sample Fidelity <hr /> R<sub>f</sub>,CES<i>i</i>
+                      </th>
+                    </Col>
+                    <Col xs={3} padding="0px">
+                      <th colSpan={3} width="100%">
+                        Test Coordinates <hr />
+                        <Col xs={4} padding="0">
+                          <i>
+                            J'
+                            <sub>t,i</sub>
+                          </i>{" "}
+                        </Col>
+                        <Col xs={4}>
+                          <i>
+                            a'<sub>t,i</sub>
+                          </i>
+                        </Col>
+                        <Col xs={4}>
+                          <i>
+                            b'<sub>t,i</sub>
+                          </i>
+                        </Col>
+                      </th>
+                    </Col>
+                    <Col xs={3}>
+                      <th colSpan={3}>
+                        Reference Coordinates <hr />
+                        <Col xs={4}>
+                          <i>
+                            J'
+                            <sub>r,i</sub>
+                          </i>{" "}
+                        </Col>
+                        <Col xs={4}>
+                          <i>
+                            a'<sub>r,i</sub>
+                          </i>
+                        </Col>
+                        <Col xs={4}>
+                          <i>
+                            b'<sub>r,i</sub>
+                          </i>
+                        </Col>
+                      </th>
+                    </Col>
+                    <Col xs={2}>
+                      <th>
+                        Hue-Angle Bin <hr /> <i>j</i>
+                      </th>
+                    </Col>
+                  </tr>
+                </thead>
+                <tbody>
+                  {this.ces[0]}
+                  {this.ces[1]}
+                  {this.ces[2]}
+                  {this.ces[3]}
+                  {this.ces[4]}
+                  {this.ces[5]}
+                  {this.ces[6]}
+                  {this.ces[7]}
+                  {this.ces[8]}
+                  {this.ces[9]}
+                  {this.ces[10]}
+                  {this.ces[11]}
+                  {this.ces[12]}
+                  {this.ces[13]}
+                  {this.ces[14]}
+                  {this.ces[15]}
+                  {this.ces[16]}
+                  {this.ces[17]}
+                  {this.ces[18]}
+                  {this.ces[19]}
+                  {this.ces[20]}
+                  {this.ces[21]}
+                  {this.ces[22]}
+                  {this.ces[23]}
+                  {this.ces[24]}
+                </tbody>
+              </Table>
+            </Card>
+          </Row>
+        </Grid>
+        <div class="container">
+          <div class="row">
+            <div class="panel panel-default">
+              <table class="table table-fixed">
+                <thead>
+                  <tr>
+                    <th class="col-xs-2">#</th>
+                    <th class="col-xs-8">Name</th>
+                    <th class="col-xs-2">Points</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="col-xs-2">1</td>
+                    <td class="col-xs-8">Mike Adams</td>
+                    <td class="col-xs-2">23</td>
+                  </tr>
+                  <tr>
+                    <td class="col-xs-2">2</td>
+                    <td class="col-xs-8">Holly Galivan</td>
+                    <td class="col-xs-2">44</td>
+                  </tr>
+                  <tr>
+                    <td class="col-xs-2">3</td>
+                    <td class="col-xs-8">Mary Shea</td>
+                    <td class="col-xs-2">86</td>
+                  </tr>
+                  <tr>
+                    <td class="col-xs-2">4</td>
+                    <td class="col-xs-8">Jim Adams</td>
+                    <td>23</td>
+                  </tr>
+                  <tr>
+                    <td class="col-xs-2">5</td>
+                    <td class="col-xs-8">Henry Galivan</td>
+                    <td class="col-xs-2">44</td>
+                  </tr>
+                  <tr>
+                    <td class="col-xs-2">6</td>
+                    <td class="col-xs-8">Bob Shea</td>
+                    <td class="col-xs-2">26</td>
+                  </tr>
+                  <tr>
+                    <td class="col-xs-2">7</td>
+                    <td class="col-xs-8">Andy Parks</td>
+                    <td class="col-xs-2">56</td>
+                  </tr>
+                  <tr>
+                    <td class="col-xs-2">8</td>
+                    <td class="col-xs-8">Bob Skelly</td>
+                    <td class="col-xs-2">96</td>
+                  </tr>
+                  <tr>
+                    <td class="col-xs-2">9</td>
+                    <td class="col-xs-8">William Defoe</td>
+                    <td class="col-xs-2">13</td>
+                  </tr>
+                  <tr>
+                    <td class="col-xs-2">10</td>
+                    <td class="col-xs-8">Will Tripp</td>
+                    <td class="col-xs-2">16</td>
+                  </tr>
+                  <tr>
+                    <td class="col-xs-2">11</td>
+                    <td class="col-xs-8">Bill Champion</td>
+                    <td class="col-xs-2">44</td>
+                  </tr>
+                  <tr>
+                    <td class="col-xs-2">12</td>
+                    <td class="col-xs-8">Lastly Jane</td>
+                    <td class="col-xs-2">6</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default Numerical;
+
+
+
+{this.ces[0]}
+                  {this.ces[1]}
+                  {this.ces[2]}
+                  {this.ces[3]}
+                  {this.ces[4]}
+                  {this.ces[5]}
+                  {this.ces[6]}
+                  {this.ces[7]}
+                  {this.ces[8]}
+                  {this.ces[9]}
+                  {this.ces[10]}
+                  {this.ces[11]}
+                  {this.ces[12]}
+                  {this.ces[13]}
+                  {this.ces[14]}
+                  {this.ces[15]}
+                  {this.ces[16]}
+                  {this.ces[17]}
+                  {this.ces[18]}
+                  {this.ces[19]}
+                  {this.ces[20]}
+                  {this.ces[21]}
+                  {this.ces[22]}
+                  {this.ces[23]}
+                  {this.ces[24]}
+{this.ces[25]}
+{this.ces[26]}
+{this.ces[27]}
+{this.ces[28]}
+{this.ces[29]}
+{this.ces[30]}
+{this.ces[31]}
+{this.ces[32]}
+{this.ces[33]}
+{this.ces[34]}
+{this.ces[35]}

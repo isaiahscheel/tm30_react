@@ -1,0 +1,958 @@
+{
+  "headers": [
+    {
+      "Example": "1 CIE F1"
+    },
+    {
+      "Example": "2 CIE F2"
+    },
+    {
+      "Example": "3 CIE F3"
+    },
+    {
+      "Example": "4 CIE F4"
+    },
+    {
+      "Example": "5 CIE F5"
+    },
+    {
+      "Example": "6 CIE F6"
+    },
+    {
+      "Example": "7 CIE F7"
+    },
+    {
+      "Example": "8 CIE F8"
+    },
+    {
+      "Example": "9 CIE F9"
+    },
+    {
+      "Example": "10 CIE F10"
+    },
+    {
+      "Example": "11 CIE F11"
+    },
+    {
+      "Example": "12 CIE F12"
+    },
+    {
+      "Example": "13 F32T8/930"
+    },
+    {
+      "Example": "14 F32T8/950"
+    },
+    {
+      "Example": "15 F34T12/CW/RS/EW"
+    },
+    {
+      "Example": "16 F34T12/LW/RS/EW"
+    },
+    {
+      "Example": "17 F34T12/WW/RS/EW"
+    },
+    {
+      "Example": "18 F40T12/C50 (1)"
+    },
+    {
+      "Example": "19 F40T12/C50 (2)"
+    },
+    {
+      "Example": "20 F40T12/C75 (1)"
+    },
+    {
+      "Example": "21 F40T12/C75 (2)"
+    },
+    {
+      "Example": "22 F40T12/CWX (1)"
+    },
+    {
+      "Example": "23 F40T12/CWX (2)"
+    },
+    {
+      "Example": "24 F40T12/DX (1)"
+    },
+    {
+      "Example": "25 F40T12/DX (2)"
+    },
+    {
+      "Example": "26 F40T12/DXTP (1)"
+    },
+    {
+      "Example": "27 F40T12/DXTP (2)"
+    },
+    {
+      "Example": "28 F40T12/N (1)"
+    },
+    {
+      "Example": "29 F40T12/N (2)"
+    },
+    {
+      "Example": "30 F32T8/730"
+    },
+    {
+      "Example": "31 F32T8/735"
+    },
+    {
+      "Example": "32 F32T8/741"
+    },
+    {
+      "Example": "33 F32T8/750"
+    },
+    {
+      "Example": "34 F32T8/830 (1)"
+    },
+    {
+      "Example": "35 F32T8/830 (2)"
+    },
+    {
+      "Example": "36 F32T8/830 (3)"
+    },
+    {
+      "Example": "37 F32T8/835 (1)"
+    },
+    {
+      "Example": "38 F32T8/835 (2)"
+    },
+    {
+      "Example": "39 F32T8/835 (3)"
+    },
+    {
+      "Example": "40 F32T8/841 (1)"
+    },
+    {
+      "Example": "41 F32T8/841 (2)"
+    },
+    {
+      "Example": "42 F32T8/841 (3)"
+    },
+    {
+      "Example": "43 F32T8/850 (1)"
+    },
+    {
+      "Example": "44 F32T8/850 (2)"
+    },
+    {
+      "Example": "45 F32T8/850 (3)"
+    },
+    {
+      "Example": "46 F32T8/865 (1)"
+    },
+    {
+      "Example": "47 F32T8/865 (2)"
+    },
+    {
+      "Example": "48 F40T12/30U"
+    },
+    {
+      "Example": "49 F40T12/35U"
+    },
+    {
+      "Example": "50 F40T12/41U"
+    },
+    {
+      "Example": "51 F40T12/50U"
+    },
+    {
+      "Example": "52 Modified Triphosphor (Duv= +0.000)"
+    },
+    {
+      "Example": "53 Modified Triphosphor (Duv= +0.006)"
+    },
+    {
+      "Example": "54 Modified Triphosphor (Duv= +0.01)"
+    },
+    {
+      "Example": "55 Modified Triphosphor (Duv= -0.005)"
+    },
+    {
+      "Example": "56 C100S54 (1) - HPS Standard"
+    },
+    {
+      "Example": "57 C100S54 (2) - HPS Standard"
+    },
+    {
+      "Example": "58 C100S54C (1) - HPS Deluxe"
+    },
+    {
+      "Example": "59 C100S54C (2) - HPS Deluxe"
+    },
+    {
+      "Example": "60 SDW-T 100W/LV - Super HPS"
+    },
+    {
+      "Example": "61 SDW-T 100W/LV - Super HPS"
+    },
+    {
+      "Example": "62 CDM 830 (1) - Metal Halide"
+    },
+    {
+      "Example": "63 CDM 830 (2) - Metal Halide"
+    },
+    {
+      "Example": "64 CDM 830 (3) - Metal Halide"
+    },
+    {
+      "Example": "65 CDM 940 (1) - Metal Halide"
+    },
+    {
+      "Example": "66 CDM 940 (2) - Metal Halide"
+    },
+    {
+      "Example": "67 MH100W - Metal Halide"
+    },
+    {
+      "Example": "68 MHC100/U/MP/3K - Metal Halide"
+    },
+    {
+      "Example": "69 MHC100/U/MP/4K - Metal Halide"
+    },
+    {
+      "Example": "70 MHC100UMP3K - Metal Halide"
+    },
+    {
+      "Example": "71 MHC100UMP4K - Metal Halide"
+    },
+    {
+      "Example": "72 H38HT-100 (1) - Mercury"
+    },
+    {
+      "Example": "73 H38HT-100 (2) - Mercury"
+    },
+    {
+      "Example": "74 H38JA-100/DX (1) - Mercury"
+    },
+    {
+      "Example": "75 H38JA-100/DX (2) - Mercury"
+    },
+    {
+      "Example": "76 Halogen (1)"
+    },
+    {
+      "Example": "77 Halogen (2)"
+    },
+    {
+      "Example": "78 Halogen (3)"
+    },
+    {
+      "Example": "79 Halogen MR16 (1)"
+    },
+    {
+      "Example": "80 Halogen MR16 (2)"
+    },
+    {
+      "Example": "81 Halogen MR16 (3)"
+    },
+    {
+      "Example": "82 Incandescent (60WA19)"
+    },
+    {
+      "Example": "83 Incandescent (75WA19 Halogena)"
+    },
+    {
+      "Example": "84 Incandescent (75WA19 Neodymium)"
+    },
+    {
+      "Example": "85 Incandescent (75WA19 Rough House)"
+    },
+    {
+      "Example": "86 Incandescent (75WA19 Softer White)"
+    },
+    {
+      "Example": "87 Krypton Incandescent"
+    },
+    {
+      "Example": "88 Neodymium Incandescent"
+    },
+    {
+      "Example": "89 Filtered Halogen"
+    },
+    {
+      "Example": "90 LED Hybrid Blue Pump (1)"
+    },
+    {
+      "Example": "91 LED Hybrid Blue Pump (2)"
+    },
+    {
+      "Example": "92 LED Hybrid Blue Pump (3)"
+    },
+    {
+      "Example": "93 LED Hybrid Blue Pump (4)"
+    },
+    {
+      "Example": "94 LED Hybrid Blue Pump (5)"
+    },
+    {
+      "Example": "95 LED Hybrid Blue Pump (6)"
+    },
+    {
+      "Example": "96 LED Hybrid Blue Pump (7)"
+    },
+    {
+      "Example": "97 LED Hybrid Blue Pump (8)"
+    },
+    {
+      "Example": "98 LED Hybrid Blue Pump (9)"
+    },
+    {
+      "Example": "99 LED Hybrid Blue Pump (10)"
+    },
+    {
+      "Example": "100 LED Hybrid Blue Pump (11)"
+    },
+    {
+      "Example": "101 LED Hybrid Blue Pump (12)"
+    },
+    {
+      "Example": "102 LED Hybrid Blue Pump (13)"
+    },
+    {
+      "Example": "103 LED Hybrid Violet Pump (1)"
+    },
+    {
+      "Example": "104 LED Hybrid Violet Pump (2)"
+    },
+    {
+      "Example": "105 RGB (445/500/640)"
+    },
+    {
+      "Example": "106 RGB (445/500/640)"
+    },
+    {
+      "Example": "107 RGB (445/515/640)"
+    },
+    {
+      "Example": "108 RGB (445/520/640)"
+    },
+    {
+      "Example": "109 RGB (450/525/625) 3K"
+    },
+    {
+      "Example": "110 RGB (450/525/625) 4K"
+    },
+    {
+      "Example": "111 RGB (450/530/645)"
+    },
+    {
+      "Example": "112 RGB (455/530/615)"
+    },
+    {
+      "Example": "113 RGB (455/534/616)"
+    },
+    {
+      "Example": "114 RGB (455/547/623)"
+    },
+    {
+      "Example": "115 RGB (457/540/605)"
+    },
+    {
+      "Example": "116 RGB (460/525/625)"
+    },
+    {
+      "Example": "117 RGB (460/540/620)"
+    },
+    {
+      "Example": "118 RGB (464/538/613)"
+    },
+    {
+      "Example": "119 RGB (464/546/620)"
+    },
+    {
+      "Example": "120 RGB (464/562/626)"
+    },
+    {
+      "Example": "121 RGB (465/525/630)"
+    },
+    {
+      "Example": "122 RGB (465/530/620)"
+    },
+    {
+      "Example": "123 RGB (465/535/590)"
+    },
+    {
+      "Example": "124 RGB (465/546/614)"
+    },
+    {
+      "Example": "125 RGB (466/538/603)"
+    },
+    {
+      "Example": "126 RGB (467/548/616)"
+    },
+    {
+      "Example": "127 RGB (470/525/630)"
+    },
+    {
+      "Example": "128 RGB (470/530/635)"
+    },
+    {
+      "Example": "129 RGB (472/550/603)"
+    },
+    {
+      "Example": "130 RGB (473/545/616)"
+    },
+    {
+      "Example": "131 RGB (474/545/616) Duv=+0.006"
+    },
+    {
+      "Example": "132 RGB (474/545/616) Duv=+0.01"
+    },
+    {
+      "Example": "133 RGB (474/545/616) Duv=0.000"
+    },
+    {
+      "Example": "134 RGB (474/545/616) Duv=-0.006"
+    },
+    {
+      "Example": "135 RGB (475/515/630)"
+    },
+    {
+      "Example": "136 RGB (475/545/615)"
+    },
+    {
+      "Example": "137 RGBA (445/495/555/615)"
+    },
+    {
+      "Example": "138 RGBA (445/495/555/615)"
+    },
+    {
+      "Example": "139 RGBA (445/505/590/640)"
+    },
+    {
+      "Example": "140 RGBA (445/505/595/640)"
+    },
+    {
+      "Example": "141 RGBA (445/520/595/640)"
+    },
+    {
+      "Example": "142 RGBA (447/512/573/627)"
+    },
+    {
+      "Example": "143 RGBA (450/525/580/625)"
+    },
+    {
+      "Example": "144 RGBA (450/525/600/650)"
+    },
+    {
+      "Example": "145 RGBA (455/530/590/635) 3K"
+    },
+    {
+      "Example": "146 RGBA (455/530/590/635) 3K-A"
+    },
+    {
+      "Example": "147 RGBA (455/530/590/635) 3K-B"
+    },
+    {
+      "Example": "148 RGBA (455/530/590/635) 3K-C"
+    },
+    {
+      "Example": "149 RGBA (455/530/590/635) 3K-D"
+    },
+    {
+      "Example": "150 RGBA (455/530/590/635) 3K-E"
+    },
+    {
+      "Example": "151 RGBA (455/530/590/635) 3K-F"
+    },
+    {
+      "Example": "152 RGBA (455/530/590/635) 3K-G"
+    },
+    {
+      "Example": "153 RGBA (455/530/590/635) 3K-H"
+    },
+    {
+      "Example": "154 RGBA (455/530/590/635) 3K-I"
+    },
+    {
+      "Example": "155 RGBA (455/530/590/635) 4K"
+    },
+    {
+      "Example": "156 RGBA (455/530/590/635) 4K-A"
+    },
+    {
+      "Example": "157 RGBA (455/530/590/635) 4K-B"
+    },
+    {
+      "Example": "158 RGBA (455/530/590/635) 4K-C"
+    },
+    {
+      "Example": "159 RGBA (455/530/590/635) 4K-D"
+    },
+    {
+      "Example": "160 RGBA (455/530/590/635) 4K-E"
+    },
+    {
+      "Example": "161 RGBA (455/530/590/635) 4K-F"
+    },
+    {
+      "Example": "162 RGBA (455/530/590/635) 4K-G"
+    },
+    {
+      "Example": "163 RGBA (455/530/590/635) 4K-H"
+    },
+    {
+      "Example": "164 RGBA (455/530/590/635) 4K-I"
+    },
+    {
+      "Example": "165 RGBA (460/530/575/625)"
+    },
+    {
+      "Example": "166 RGBA (461/526/576/624)"
+    },
+    {
+      "Example": "167 RGBA (470/520/595/635) - 27K"
+    },
+    {
+      "Example": "168 RGBA (470/520/595/635) - 65K"
+    },
+    {
+      "Example": "169 LED Phosphor Blue Pump (01)"
+    },
+    {
+      "Example": "170 LED Phosphor Blue Pump (02)"
+    },
+    {
+      "Example": "171 LED Phosphor Blue Pump (03)"
+    },
+    {
+      "Example": "172 LED Phosphor Blue Pump (04)"
+    },
+    {
+      "Example": "173 LED Phosphor Blue Pump (05)"
+    },
+    {
+      "Example": "174 LED Phosphor Blue Pump (06)"
+    },
+    {
+      "Example": "175 LED Phosphor Blue Pump (07)"
+    },
+    {
+      "Example": "176 LED Phosphor Blue Pump (08)"
+    },
+    {
+      "Example": "177 LED Phosphor Blue Pump (09)"
+    },
+    {
+      "Example": "178 LED Phosphor Blue Pump (10)"
+    },
+    {
+      "Example": "179 LED Phosphor Blue Pump (11)"
+    },
+    {
+      "Example": "180 LED Phosphor Blue Pump (12)"
+    },
+    {
+      "Example": "181 LED Phosphor Blue Pump (13)"
+    },
+    {
+      "Example": "182 LED Phosphor Blue Pump (14)"
+    },
+    {
+      "Example": "183 LED Phosphor Blue Pump (15)"
+    },
+    {
+      "Example": "184 LED Phosphor Blue Pump (16)"
+    },
+    {
+      "Example": "185 LED Phosphor Blue Pump (17)"
+    },
+    {
+      "Example": "186 LED Phosphor Blue Pump (18)"
+    },
+    {
+      "Example": "187 LED Phosphor Blue Pump (19)"
+    },
+    {
+      "Example": "188 LED Phosphor Blue Pump (20)"
+    },
+    {
+      "Example": "189 LED Phosphor Blue Pump (21)"
+    },
+    {
+      "Example": "190 LED Phosphor Blue Pump (22)"
+    },
+    {
+      "Example": "191 LED Phosphor Blue Pump (23)"
+    },
+    {
+      "Example": "192 LED Phosphor Blue Pump (24)"
+    },
+    {
+      "Example": "193 LED Phosphor Blue Pump (25)"
+    },
+    {
+      "Example": "194 LED Phosphor Blue Pump (26)"
+    },
+    {
+      "Example": "195 LED Phosphor Blue Pump (27)"
+    },
+    {
+      "Example": "196 LED Phosphor Blue Pump (28)"
+    },
+    {
+      "Example": "197 LED Phosphor Blue Pump (29)"
+    },
+    {
+      "Example": "198 LED Phosphor Blue Pump (30)"
+    },
+    {
+      "Example": "199 LED Phosphor Blue Pump (31)"
+    },
+    {
+      "Example": "200 LED Phosphor Blue Pump (32)"
+    },
+    {
+      "Example": "201 LED Phosphor Blue Pump (33)"
+    },
+    {
+      "Example": "202 LED Phosphor Blue Pump (34)"
+    },
+    {
+      "Example": "203 LED Phosphor Blue Pump (35)"
+    },
+    {
+      "Example": "204 LED Phosphor Blue Pump (36)"
+    },
+    {
+      "Example": "205 LED Phosphor Blue Pump (37)"
+    },
+    {
+      "Example": "206 LED Phosphor Blue Pump (38)"
+    },
+    {
+      "Example": "207 LED Phosphor Blue Pump (39)"
+    },
+    {
+      "Example": "208 LED Phosphor Blue Pump (40)"
+    },
+    {
+      "Example": "209 LED Phosphor Blue Pump (41)"
+    },
+    {
+      "Example": "210 LED Phosphor Blue Pump (42)"
+    },
+    {
+      "Example": "211 LED Phosphor Blue Pump (43)"
+    },
+    {
+      "Example": "212 LED Phosphor Blue Pump (44)"
+    },
+    {
+      "Example": "213 LED Phosphor Blue Pump (45)"
+    },
+    {
+      "Example": "214 LED Phosphor Blue Pump (46)"
+    },
+    {
+      "Example": "215 LED Phosphor Blue Pump (47)"
+    },
+    {
+      "Example": "216 LED Phosphor Blue Pump (48)"
+    },
+    {
+      "Example": "217 LED Phosphor Blue Pump (49)"
+    },
+    {
+      "Example": "218 LED Phosphor Blue Pump (50)"
+    },
+    {
+      "Example": "219 LED Phosphor Blue Pump (51)"
+    },
+    {
+      "Example": "220 LED Phosphor Blue Pump (52)"
+    },
+    {
+      "Example": "221 LED Phosphor Blue Pump (53)"
+    },
+    {
+      "Example": "222 LED Phosphor Blue Pump (54)"
+    },
+    {
+      "Example": "223 LED Phosphor Blue Pump (55)"
+    },
+    {
+      "Example": "224 LED Phosphor Blue Pump (56)"
+    },
+    {
+      "Example": "225 LED Phosphor Blue Pump (57)"
+    },
+    {
+      "Example": "226 LED Phosphor Blue Pump (58)"
+    },
+    {
+      "Example": "227 LED Phosphor Blue Pump (59)"
+    },
+    {
+      "Example": "228 LED Phosphor Blue Pump (60)"
+    },
+    {
+      "Example": "229 LED Phosphor Blue Pump (61)"
+    },
+    {
+      "Example": "230 LED Phosphor Blue Pump (62)"
+    },
+    {
+      "Example": "231 LED Phosphor Blue Pump (63)"
+    },
+    {
+      "Example": "232 LED Phosphor Blue Pump (64)"
+    },
+    {
+      "Example": "233 LED Phosphor Blue Pump (65)"
+    },
+    {
+      "Example": "234 LED Phosphor Blue Pump (66)"
+    },
+    {
+      "Example": "235 LED Phosphor Blue Pump (67)"
+    },
+    {
+      "Example": "236 LED Phosphor Blue Pump (68)"
+    },
+    {
+      "Example": "237 LED Phosphor Blue Pump (69)"
+    },
+    {
+      "Example": "238 LED Phosphor Blue Pump (70)"
+    },
+    {
+      "Example": "239 LED Phosphor Blue Pump (71)"
+    },
+    {
+      "Example": "240 LED Phosphor Blue Pump (72)"
+    },
+    {
+      "Example": "241 LED Phosphor Blue Pump (73)"
+    },
+    {
+      "Example": "242 LED Phosphor Blue Pump (74)"
+    },
+    {
+      "Example": "243 LED Phosphor Blue Pump (75)"
+    },
+    {
+      "Example": "244 LED Phosphor Blue Pump (76)"
+    },
+    {
+      "Example": "245 LED Phosphor Blue Pump (77)"
+    },
+    {
+      "Example": "246 LED Phosphor Blue Pump (78)"
+    },
+    {
+      "Example": "247 LED Phosphor Blue Pump (79)"
+    },
+    {
+      "Example": "248 LED Phosphor Blue Pump (80)"
+    },
+    {
+      "Example": "249 LED Phosphor Blue Pump (81)"
+    },
+    {
+      "Example": "250 LED Phosphor Blue Pump (82)"
+    },
+    {
+      "Example": "251 LED Phosphor Blue Pump (83)"
+    },
+    {
+      "Example": "252 LED Phosphor Blue Pump (84)"
+    },
+    {
+      "Example": "253 LED Phosphor Blue Pump (85)"
+    },
+    {
+      "Example": "254 LED Phosphor Blue Pump (86)"
+    },
+    {
+      "Example": "255 LED Phosphor Blue Pump (87)"
+    },
+    {
+      "Example": "256 LED Phosphor Blue Pump (88)"
+    },
+    {
+      "Example": "257 LED Phosphor Blue Pump (89)"
+    },
+    {
+      "Example": "258 LED Phosphor Blue Pump (90)"
+    },
+    {
+      "Example": "259 LED Phosphor Blue Pump (91)"
+    },
+    {
+      "Example": "260 LED Phosphor Blue Pump (92)"
+    },
+    {
+      "Example": "261 LED Phosphor Blue Pump (93)"
+    },
+    {
+      "Example": "262 LED Phosphor Blue Pump (94)"
+    },
+    {
+      "Example": "263 LED Phosphor Blue Pump (95)"
+    },
+    {
+      "Example": "264 LED Phosphor Blue Pump (96)"
+    },
+    {
+      "Example": "265 LED Phosphor Blue Pump (97)"
+    },
+    {
+      "Example": "266 LED Phosphor Blue Pump (98)"
+    },
+    {
+      "Example": "267 LED Phosphor Blue Pump (99)"
+    },
+    {
+      "Example": "268 LED Phosphor Blue Pump (100)"
+    },
+    {
+      "Example": "269 LED Phosphor Blue Pump (101)"
+    },
+    {
+      "Example": "270 LED Phosphor Blue Pump (102)"
+    },
+    {
+      "Example": "271 LED Phosphor Blue Pump (103)"
+    },
+    {
+      "Example": "272 LED Phosphor Blue Pump (104)"
+    },
+    {
+      "Example": "273 LED Phosphor Blue Pump (105)"
+    },
+    {
+      "Example": "274 LED Phosphor Blue Pump (106)"
+    },
+    {
+      "Example": "275 LED Phosphor Blue Pump (107)"
+    },
+    {
+      "Example": "276 LED Phosphor Blue Pump (108)"
+    },
+    {
+      "Example": "277 LED Phosphor Blue Pump (109)"
+    },
+    {
+      "Example": "278 LED Phosphor Blue Pump (110)"
+    },
+    {
+      "Example": "279 LED Phosphor Blue Pump (111)"
+    },
+    {
+      "Example": "280 LED Phosphor Blue Pump (112)"
+    },
+    {
+      "Example": "281 LED Phosphor Blue Pump (113)"
+    },
+    {
+      "Example": "282 LED Phosphor Blue Pump (114)"
+    },
+    {
+      "Example": "283 LED Phosphor Blue Pump (115)"
+    },
+    {
+      "Example": "284 LED Phosphor Blue Pump (116)"
+    },
+    {
+      "Example": "285 LED Phosphor Blue Pump (117)"
+    },
+    {
+      "Example": "286 LED Phosphor Blue Pump (118)"
+    },
+    {
+      "Example": "287 LED Phosphor Blue Pump (119)"
+    },
+    {
+      "Example": "288 LED Phosphor Blue Pump (120)"
+    },
+    {
+      "Example": "289 LED Phosphor Blue Pump (121)"
+    },
+    {
+      "Example": "290 LED Phosphor Blue Pump (122)"
+    },
+    {
+      "Example": "291 LED Phosphor Blue Pump (123)"
+    },
+    {
+      "Example": "292 LED Phosphor Blue Pump (124)"
+    },
+    {
+      "Example": "293 LED Phosphor Blue Pump (125)"
+    },
+    {
+      "Example": "294 LED Phosphor Violet Pump (1)"
+    },
+    {
+      "Example": "295 LED Phosphor Violet Pump (2)"
+    },
+    {
+      "Example": "296 LED Phosphor Violet Pump (3)"
+    },
+    {
+      "Example": "297 LED Phosphor Violet Pump (4)"
+    },
+    {
+      "Example": "298 CIE D Series 5000 K"
+    },
+    {
+      "Example": "299 CIE D Series 5500 K"
+    },
+    {
+      "Example": "300 CIE D Series 6000 K"
+    },
+    {
+      "Example": "301 CIE D Series 6500 K"
+    },
+    {
+      "Example": "302 CIE D Series 7000 K"
+    },
+    {
+      "Example": "303 CIE D Series 7500 K"
+    },
+    {
+      "Example": "304 CIE D Series 8000 K"
+    },
+    {
+      "Example": "305 Mixed Reference 5000 K"
+    },
+    {
+      "Example": "306 Planckian Radiation 2000 K"
+    },
+    {
+      "Example": "307 Planckian Radiation 2500 K"
+    },
+    {
+      "Example": "308 Planckian Radiation 2700 K"
+    },
+    {
+      "Example": "309 Planckian Radiation 3000 K"
+    },
+    {
+      "Example": "310 Planckian Radiation 3500 K"
+    },
+    {
+      "Example": "311 Planckian Radiation 4000 K"
+    },
+    {
+      "Example": "312 Planckian Radiation 4500 K"
+    },
+    {
+      "Example": "313 Planckian Radiation 4999 K"
+    },
+    {
+      "Example": "314 Equal Energy"
+    },
+    {
+      "Example": "315 Ideal Prime Color"
+    },
+    {
+      "Example": "316 Plasma"
+    },
+    {
+      "Example": "317 Tri-band Gaussian"
+    },
+    {
+      "Example": "318 Tri-band Gaussian"
+    }
+  ]
+}

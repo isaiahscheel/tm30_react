@@ -1,0 +1,35 @@
+            {/*console.log(this.props.location.state.data.tm30)
+            {/*
+            CCT Test ={" "}
+            {this.props.location.state.data.tm30.Numerical_Results.CCT[0]}
+            &nbsp;&nbsp;&nbsp;&nbsp; CCT Ref ={" "}
+            {this.props.location.state.data.tm30.Numerical_Results.CCT[1]}
+            <br />
+            DUV Test =
+            {this.props.location.state.data.tm30.Numerical_Results.DUV[0]}
+            &nbsp;&nbsp;&nbsp;&nbsp; DUV Ref =
+            {this.props.location.state.data.tm30.Numerical_Results.DUV[1]}
+            <br />
+            LER Test ={" "}
+            {this.props.location.state.data.tm30.Numerical_Results.LER[0]}
+            &nbsp;&nbsp;&nbsp;&nbsp; LER Ref ={" "}
+            {this.props.location.state.data.tm30.Numerical_Results.LER[1]}
+            <br />x Test ={" "}
+            {this.props.location.state.data.tm30.Numerical_Results.x[0]}
+            &nbsp;&nbsp;&nbsp;&nbsp;x Ref ={" "}
+            {this.props.location.state.data.tm30.Numerical_Results.x[1]}
+            <br />y Test ={" "}
+            {this.props.location.state.data.tm30.Numerical_Results.y[0]}
+            &nbsp;&nbsp;&nbsp;&nbsp;y Ref ={" "}
+            {this.props.location.state.data.tm30.Numerical_Results.y[1]}
+            <br />u Test ={" "}
+            {this.props.location.state.data.tm30.Numerical_Results.u[0]}
+            &nbsp;&nbsp;&nbsp;&nbsp;u Ref ={" "}
+            {this.props.location.state.data.tm30.Numerical_Results.u[1]}
+            <br />v Test ={" "}
+            {this.props.location.state.data.tm30.Numerical_Results.v[0]}
+            &nbsp;&nbsp;&nbsp;&nbsp;v Ref ={" "}
+            {this.props.location.state.data.tm30.Numerical_Results.v[1]}
+            <br />
+            <br />
+            */}

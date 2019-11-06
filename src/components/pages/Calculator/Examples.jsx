@@ -37,13 +37,9 @@ class Examples extends React.Component {
       this.setState({ loading: true }, () => {
         axios.defaults.headers.common = {};
         axios.defaults.headers.common.accept = "application/json";
-        axios.post(
-          //"https://cors-anywhere.herokuapp.com/http://dtn3.pnl.gov:8080/api/tm30Paste",
-          "https://dtn3.pnl.gov:8080/api/tm30Paste",
-          {
-            info: exSpd
-          }
-        ),
+        axios.post("https://dtn3.pnl.gov:8080/api/tm30Paste", {
+          info: exSpd
+        }),
           { crossdomain: true }
             .then(res => {
               return res.data;

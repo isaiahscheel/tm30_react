@@ -191,8 +191,8 @@ export class Numerical extends Component {
                   </thead>
                   <tbody>
                     <tr>
-                      <td>{Math.round(this.tm30.rf)}</td>
                       <td>{Math.round(this.tm30.rg)}</td>
+                      <td>{Math.round(this.tm30.rf)}</td>
                     </tr>
                   </tbody>
                 </Table>
@@ -651,67 +651,79 @@ export class Numerical extends Component {
                       </td>
                     </tr>
                     <tr>
-                      <th>DUV</th>
+                      <th>
+                        <i>
+                          D<sub>uv</sub>
+                        </i>
+                      </th>
                       <td>
                         <font color="fd191f">
-                          {Math.round(this.tm30.DUV[0] * 10000) / 1000}
+                          {Math.round(this.tm30.DUV[0] * 10000) / 10000}
                         </font>
                       </td>
                       <td>
                         <font color="021f5f">
-                          {Math.round(this.tm30.DUV[1] * 10000) / 1000}
+                          {Math.round(this.tm30.DUV[1] * 10000) / 10000}
                         </font>
                       </td>
                     </tr>
                     <tr>
-                      <th>x</th>
+                      <th>
+                        <i>x</i>
+                      </th>
                       <td>
                         <font color="fd191f">
-                          {Math.round(this.tm30.x[0] * 10000) / 1000}
+                          {Math.round(this.tm30.x[0] * 10000) / 10000}
                         </font>
                       </td>
                       <td>
                         <font color="021f5f">
-                          {Math.round(this.tm30.x[1] * 10000) / 1000}
+                          {Math.round(this.tm30.x[1] * 10000) / 10000}
                         </font>
                       </td>
                     </tr>
                     <tr>
-                      <th>y</th>
+                      <th>
+                        <i>y</i>
+                      </th>
                       <td>
                         <font color="fd191f">
-                          {Math.round(this.tm30.y[0] * 10000) / 1000}
+                          {Math.round(this.tm30.y[0] * 10000) / 10000}
                         </font>
                       </td>
                       <td>
                         <font color="021f5f">
-                          {Math.round(this.tm30.y[1] * 10000) / 1000}
+                          {Math.round(this.tm30.y[1] * 10000) / 10000}
                         </font>
                       </td>
                     </tr>
                     <tr>
-                      <th>u'</th>
+                      <th>
+                        <i>u'</i>
+                      </th>
                       <td>
                         <font color="fd191f">
-                          {Math.round(this.tm30.u[0] * 10000) / 1000}
+                          {Math.round(this.tm30.u[0] * 10000) / 10000}
                         </font>
                       </td>
                       <td>
                         <font color="021f5f">
-                          {Math.round(this.tm30.u[1] * 10000) / 1000}
+                          {Math.round(this.tm30.u[1] * 10000) / 10000}
                         </font>
                       </td>
                     </tr>
                     <tr>
-                      <th>v'</th>
+                      <th>
+                        <i>v'</i>
+                      </th>
                       <td>
                         <font color="fd191f">
-                          {Math.round(this.tm30.v[0] * 10000) / 1000}
+                          {Math.round(this.tm30.v[0] * 10000) / 10000}
                         </font>
                       </td>
                       <td>
                         <font color="021f5f">
-                          {Math.round(this.tm30.v[1] * 10000) / 1000}
+                          {Math.round(this.tm30.v[1] * 10000) / 10000}
                         </font>
                       </td>
                     </tr>

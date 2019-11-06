@@ -140,7 +140,7 @@ export class Paste extends Component {
                 });
             });
           } else {
-            alert("SPD size does not match interval size (1)");
+            alert("SPD size does not match interval size (error code: 409)");
           }
         }
       );

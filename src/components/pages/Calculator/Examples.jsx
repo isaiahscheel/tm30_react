@@ -74,11 +74,11 @@ class Examples extends React.Component {
     } else {
       this.setState({ example_number: event.target.value, disabled: false });
     }
-    console.log(this.state.example_number);
+    //console.log(this.state.example_number);
   }
   render() {
     const loading = this.state.loading;
-    console.log(exampleHeaders.headers[0]["Example"]);
+    //console.log(exampleHeaders.headers[0]["Example"]);
     let optionItems = this.examples.map(example => (
       <option key={example} value={example}>
         {example}

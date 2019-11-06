@@ -39,7 +39,7 @@ class Examples extends React.Component {
         axios.defaults.headers.common.accept = "application/json";
         axios
           .post(
-            "https://cors-anywhere.herokuapp.com/https://dtn3.pnl.gov:8080/api/tm30Paste",
+            "https://cors-anywhere.herokuapp.com/http://dtn3.pnl.gov:8080/api/tm30Paste",
             {
               info: exSpd
             }

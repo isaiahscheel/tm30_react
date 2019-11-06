@@ -9,7 +9,7 @@ const Home = ({ me }) => {
   return (
     <Grid className="home-container">
       <h1>ANSI/IES TM-30-18 Advanced Calculation Web Tool</h1>
-      {console.log("Version 0.1.1")
+      {console.log("Version 0.1.2")
       //<ProfilePopover person={me} />
       }
       {/*

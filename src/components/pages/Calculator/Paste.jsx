@@ -107,13 +107,10 @@ export class Paste extends Component {
               axios.defaults.headers.common = {};
               axios.defaults.headers.common.accept = "application/json";
               axios
-                .post(
-                  "https://cors-anywhere.herokuapp.com/http://dtn3.pnl.gov:8080/api/tm30Paste",
-                  {
-                    //.post("http://localhost:5000/api/tm30Paste", {
-                    info: this.state.spd_array
-                  }
-                )
+                .post("https://dtn3.pnl.gov:8080/api/tm30Paste", {
+                  //.post("http://localhost:5000/api/tm30Paste", {
+                  info: this.state.spd_array
+                })
                 .then(res => {
                   return res.data;
                 })

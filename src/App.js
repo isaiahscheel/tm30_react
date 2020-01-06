@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import Grid from "react-bootstrap/es/Grid";
 import Header from "pnnl-react-core/lib/Header";
 import WebFooter from "pnnl-react-core/lib/WebFooter";
@@ -24,7 +24,7 @@ class App extends Component {
 
   render() {
     return (
-      <BrowserRouter>
+      <HashRouter basename="/">
         <div className="App">
           <Header
             appLogo={`${process.env.PUBLIC_URL}/images/ies-logo.jpg`}
@@ -47,7 +47,7 @@ class App extends Component {
           </main>
           <footer>{<Footer />}</footer>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 }

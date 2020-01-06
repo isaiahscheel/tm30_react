@@ -19,7 +19,7 @@ import Card from "pnnl-react-core/lib/Card";
  * Home Class
  */
 const Home = () => {
-  console.log("Version 1.2");
+  console.log("Version 1.2.1");
   /**
    * Return for the Home class. Mostly instructions and boilerplate info.
    */

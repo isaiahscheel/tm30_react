@@ -419,10 +419,13 @@ export class Paste extends Component {
                 axios.defaults.headers.common.accept = "application/json";
                 axios
                   //.post("http://localhost:5000/api/tm30Paste", {
-                  .post("http://lampprod03.pnl.gov:8081/api/tm30Paste", {
-                    spd: this.state.spd_array,
-                    wavelength: this.state.wavelength_array
-                  })
+                  .post(
+                    "https://cors-anywhere.herokuapp.com/http://lampprod03.pnl.gov:8081/api/tm30Paste",
+                    {
+                      spd: this.state.spd_array,
+                      wavelength: this.state.wavelength_array
+                    }
+                  )
                   .then(res => {
                     return res.data;
                   })

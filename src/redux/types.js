@@ -1,0 +1,8 @@
+//Data Reducer types
+export const SET_SPD_WAVELENGTH = "SET_SPD_WAVELENGTH";
+export const SET_EXAMPLE_OPEN = "SET_EXAMPLE_OPEN";
+export const SET_PASTE_OPEN = "SET_PASTE_OPEN";
+export const SET_EXAMPLE = "SET_EXAMPLE";
+export const SET_BIN_LABELS = "SET_BIN_LABELS";
+export const SET_BIN_DIVIDERS = "SET_BIN_DIVIDERS";
+export const SET_CHROMA_ISOLINES = "SET_CHROMA_ISOLINES";

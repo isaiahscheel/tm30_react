@@ -6,10 +6,10 @@ import NavItem from "pnnl-react-core/lib/NavItem";
 const Navigation = () => (
   <NavBar>
     <Col sm={1} componentClass="ul">
-      <NavItem to="/home" icon="home" text="Home" onlyActiveOnIndex />
+      <NavItem to="/" icon="home" text="Home" onlyActiveOnIndex />
     </Col>
     <Col sm={1} componentClass="ul">
-      <NavItem to="/calc" icon="software" text="Calculator" />
+      <NavItem to="/calc" icon="software" text="Data Input" />
     </Col>
     <Col sm={1} componentClass="ul">
       <NavItem to="/Report" icon="report" text="Report" />

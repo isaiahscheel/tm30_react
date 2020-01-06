@@ -9,17 +9,99 @@
 @import "/node_modules/react-grid-layout/css/styles.css";
 @import "/node_modules/react-resizable/css/styles.css";
 
+//@import "/node_modules/react-datasheet/lib/react-datasheet.css";
+
 /***** Your Application Specific Code Goes Here *****/
 
-input[type="text"],
-select {
+.footer {
   width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+  background-color: #d6781e;
+  height: 10%;
+  color: white;
+  padding: 30px;
+}
+
+.footer-top {
+  text-align: center;
+}
+
+.center {
+  margin: auto;
+}
+
+/*
+textarea:focus,
+input:focus,
+select:focus,
+.uneditable-input:focus {
+  border-color: #d6771e46;
+  box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075),
+    0 0 15px rgba(229, 103, 23, 0.6);
+  outline: 0 none;
+}
+*/
+
+.footer-bottom {
+  a {
+    text-decoration: none;
+  }
+  text-align: center;
+  /* unvisited link */
+  a:link {
+    color: white;
+  }
+
+  /* visited link */
+  a:visited {
+    color: white;
+  }
+
+  /* mouse over link */
+  a:hover {
+    color: whitesmoke;
+  }
+
+  /* selected link */
+  a:active {
+    color: white;
+  }
+}
+
+.footer-picture {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.selecter {
+  select {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+}
+
+.tooltip {
+  color: white;
+}
+
+.text_paste {
+  textarea {
+    max-width: 100%;
+    min-width: 100%;
+    width: 100%;
+    height: 10em;
+  }
+}
+
+MuiTooltip {
+  font-size: larger;
 }
 
 .titlebar {
@@ -28,7 +110,6 @@ select {
     color: #d77600;
   }
 }
-
 table {
   border-collapse: collapse;
   width: 100%;
@@ -176,10 +257,17 @@ hr {
   //margin-left: 0px;
 }
 
+.cell {
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 .SideScroll {
   white-space: nowrap;
   overflow: scroll;
-  overflow-x: scroll;
+  overflow-x: auto;
+  overflow-y: auto;
   display: inline-block;
   width: 125%;
   margin-left: -15%;

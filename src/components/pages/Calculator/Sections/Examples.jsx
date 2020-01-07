@@ -91,13 +91,10 @@ class Examples extends React.Component {
          * Call to the API with the Example SPD Information.
          */
         axios
-          .post(
-            "https://cors-anywhere.herokuapp.com/http://lampprod03.pnl.gov:8081/api/tm30Paste",
-            {
-              spd: exSpd,
-              wavelength: wavelength
-            }
-          )
+          .post("https://rcdemo.pnnl.gov/api/tm30Paste", {
+            spd: exSpd,
+            wavelength: wavelength
+          })
           .then(res => {
             return res.data;
           })

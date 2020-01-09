@@ -189,7 +189,8 @@ class Report extends React.Component {
       var name = `${this.name}-${this.state.active}.png`;
       var fileDownload = require("js-file-download");
       htmlToImage
-        .toBlob(document.getElementById(`${this.state.active}`))
+        //.toBlob(document.getElementById(`${this.state.active}-print`))
+        .toBlob(document.getElementById(`Intermediate`))
         .then(function(dataUrl) {
           fileDownload(dataUrl, name);
         });
@@ -277,7 +278,7 @@ class Report extends React.Component {
           </div>
         )}
         {!(this.props.location.state == null) ? (
-          <Grid>
+          <div>
             {
               //(this.name = this.props.location.state.name)
             }
@@ -470,8 +471,9 @@ class Report extends React.Component {
             {this.state.active === "Basic" ? (
               <div
                 style={{
-                  width: "125%",
-                  marginLeft: "-15%",
+                  //width: "125%",
+                  marginLeft: "25px",
+                  marginRight: "25px",
                   padding: "50, 50, 50, 50"
                 }}
                 ref={ref}
@@ -479,10 +481,10 @@ class Report extends React.Component {
               >
                 <br />
                 <Row>
-                  <Col xs={12} md={7}>
+                  <Col xs={12} md={6}>
                     {" "}
                     <Card>
-                      <div style={this.holder(400)}>
+                      <div>
                         <ELFPlot
                           test={
                             this.props.location.state.data.tm30
@@ -499,9 +501,9 @@ class Report extends React.Component {
                       </div>
                     </Card>
                   </Col>
-                  <Col xs={12} md={5}>
+                  <Col xs={12} md={6}>
                     <Card>
-                      <div style={this.holder(400)}>
+                      <div>
                         <LCSPlot
                           data={
                             this.props.location.state.data.tm30
@@ -514,47 +516,49 @@ class Report extends React.Component {
                 </Row>
                 <br />
                 <Row>
-                  <Col xs={12} md={7}>
+                  <Col xs={12} md={6} id="CVG">
                     <Card>
-                      <CVGPlot
-                        xtest={
-                          this.props.location.state.data.tm30.Numerical_Results
-                            .path_xtest
-                        }
-                        ytest={
-                          this.props.location.state.data.tm30.Numerical_Results
-                            .path_ytest
-                        }
-                        xref={
-                          this.props.location.state.data.tm30.Numerical_Results
-                            .path_xref
-                        }
-                        yref={
-                          this.props.location.state.data.tm30.Numerical_Results
-                            .path_yref
-                        }
-                        rf={
-                          this.props.location.state.data.tm30.Numerical_Results
-                            .rg
-                        }
-                        rg={
-                          this.props.location.state.data.tm30.Numerical_Results
-                            .rf
-                        }
-                        cct={
-                          this.props.location.state.data.tm30.Numerical_Results
-                            .CCT[0]
-                        }
-                        duv={
-                          this.props.location.state.data.tm30.Numerical_Results
-                            .DUV[0]
-                        }
-                      ></CVGPlot>
+                      <div>
+                        <CVGPlot
+                          xtest={
+                            this.props.location.state.data.tm30
+                              .Numerical_Results.path_xtest
+                          }
+                          ytest={
+                            this.props.location.state.data.tm30
+                              .Numerical_Results.path_ytest
+                          }
+                          xref={
+                            this.props.location.state.data.tm30
+                              .Numerical_Results.path_xref
+                          }
+                          yref={
+                            this.props.location.state.data.tm30
+                              .Numerical_Results.path_yref
+                          }
+                          rf={
+                            this.props.location.state.data.tm30
+                              .Numerical_Results.rg
+                          }
+                          rg={
+                            this.props.location.state.data.tm30
+                              .Numerical_Results.rf
+                          }
+                          cct={
+                            this.props.location.state.data.tm30
+                              .Numerical_Results.CCT[0]
+                          }
+                          duv={
+                            this.props.location.state.data.tm30
+                              .Numerical_Results.DUV[0]
+                          }
+                        ></CVGPlot>
+                      </div>
                     </Card>
                   </Col>
-                  <Col xs={12} md={5}>
+                  <Col xs={12} md={6}>
                     <Card>
-                      <div style={this.holder(400)}>
+                      <div>
                         <LHSPlot
                           data={
                             this.props.location.state.data.tm30
@@ -567,7 +571,7 @@ class Report extends React.Component {
                     <br />
 
                     <Card>
-                      <div style={this.holder(380)}>
+                      <div>
                         <LCFPlot
                           data={
                             this.props.location.state.data.tm30
@@ -583,18 +587,32 @@ class Report extends React.Component {
               <div></div>
             )}
             {this.state.active === "Numerical" ? (
-              <Numerical
-                tm30={this.props.location.state.data.tm30.Numerical_Results}
-                input={this.props.location.state.data.tm30.input}
-              />
+              <div
+                style={{
+                  paddingRight: "25px",
+                  paddingLeft: "25px"
+                }}
+              >
+                <Numerical
+                  tm30={this.props.location.state.data.tm30.Numerical_Results}
+                  input={this.props.location.state.data.tm30.input}
+                />
+              </div>
             ) : (
               <div></div>
             )}
             {this.state.active === "Graphical" ? (
-              <Graphical
-                tm30={this.props.location.state.data.tm30.Numerical_Results}
-                input={this.props.location.state.data.tm30.input}
-              />
+              <div
+                style={{
+                  paddingRight: "25px",
+                  paddingLeft: "25px"
+                }}
+              >
+                <Graphical
+                  tm30={this.props.location.state.data.tm30.Numerical_Results}
+                  input={this.props.location.state.data.tm30.input}
+                />
+              </div>
             ) : (
               <div></div>
             )}
@@ -611,13 +629,16 @@ class Report extends React.Component {
             {this.state.active === "Intermediate" ? (
               <div>
                 <div
-                  style={
-                    {
-                      //width: "115%",
-                      //marginLeft: "-10%",
-                      //padding: "50, 50, 50, 50"
-                    }
-                  }
+                  style={{
+                    //width: "125%",
+                    //marginLeft: "25px",
+                    // marginRight: "25px",
+                    //width: "8.5in",
+                    //height: "5.5in",
+                    paddingRight: "25px",
+                    paddingLeft: "25px",
+                    padding: "50, 50, 50, 50"
+                  }}
                   ref={ref}
                   id="Intermediate"
                 >
@@ -635,7 +656,7 @@ class Report extends React.Component {
             ) : (
               <div></div>
             )}
-          </Grid>
+          </div>
         ) : (
           <div></div>
         )}

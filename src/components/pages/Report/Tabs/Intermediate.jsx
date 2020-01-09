@@ -60,28 +60,30 @@ export class Intermediate extends Component {
           >
             ANSI IES TM-30-18 Color Rendition
           </h2>
-          <Col xs={12} md={7}>
-            <CVGPlot
-              xtest={this.tm30.path_xtest}
-              ytest={this.tm30.path_ytest}
-              xref={this.tm30.path_xref}
-              yref={this.tm30.path_yref}
-              rf={this.tm30.rg}
-              rg={this.tm30.rf}
-              cct={this.tm30.CCT[0]}
-              duv={this.tm30.DUV[0]}
-              active="Intermediate"
-            ></CVGPlot>
+          <Col xs={12} md={6}>
+            <div style={{ verticalAlign: "middle" }}>
+              <CVGPlot
+                xtest={this.tm30.path_xtest}
+                ytest={this.tm30.path_ytest}
+                xref={this.tm30.path_xref}
+                yref={this.tm30.path_yref}
+                rf={this.tm30.rg}
+                rg={this.tm30.rf}
+                cct={this.tm30.CCT[0]}
+                duv={this.tm30.DUV[0]}
+                active="Intermediate"
+              ></CVGPlot>
+            </div>
           </Col>
-          <Col xs={12} md={5}>
-            <div style={this.holder(325)}>
+          <Col xs={12} md={6}>
+            <div>
               <LCSPlot
                 data={this.tm30.local_chroma_shift}
                 active="Intermediate"
               ></LCSPlot>
             </div>
 
-            <div style={this.holder(325)}>
+            <div>
               <LHSPlot
                 data={this.tm30.local_hue_shift}
                 active="Intermediate"

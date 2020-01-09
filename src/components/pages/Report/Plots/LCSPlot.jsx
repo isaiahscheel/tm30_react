@@ -49,11 +49,13 @@ export class LCSPlot extends Component {
       this.height = 400;
       this.bar_gap = 5;
     } else if (this.intermediate) {
-      this.width = 550;
-      this.height = 325;
+      this.style = { width: "100%", paddingBottom: "50%" };
+      //this.width = 550;
+      //this.height = 412;
     } else {
-      this.width = 550;
-      this.height = 400;
+      this.style = { width: "100%", paddingBottom: "50%" };
+      //this.width = 550;
+      //this.height = 400;
       this.bar_gap = 0;
     }
 
@@ -127,7 +129,7 @@ export class LCSPlot extends Component {
     return (
       <Plot
         useResizeHandler={true}
-        style={{ width: "100%" }}
+        style={this.style}
         title={null}
         data={[
           {
@@ -139,10 +141,10 @@ export class LCSPlot extends Component {
               color: this.bar_colors
             },
             textfont: {
-              size: 30
+              size: 14
             },
             outsidetextfont: {
-              size: 30
+              size: 14
             },
             text: this.y_rounded,
             textangle: "-90",

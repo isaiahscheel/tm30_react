@@ -34,16 +34,14 @@ class App extends Component {
             className="titlebar"
           />
           <main>
-            <Grid>
-              <Switch>
-                <Route path="/Report" component={Report} />
-                <Route path="/calc" component={Calc} />
-                <Route path="/home" component={Home} />
-                <Route exact path="/" component={Home} />
-                <Route exact path="/profile" component={Profile} />
-                <Route component={FourOhFour} />
-              </Switch>
-            </Grid>
+            <Switch>
+              <Route path="/Report" component={Report} />
+              <Route path="/calc" component={Calc} />
+              <Route path="/home" component={Home} />
+              <Route exact path="/" component={Home} />
+              <Route exact path="/profile" component={Profile} />
+              <Route component={FourOhFour} />
+            </Switch>
           </main>
           <footer>{<Footer />}</footer>
         </div>

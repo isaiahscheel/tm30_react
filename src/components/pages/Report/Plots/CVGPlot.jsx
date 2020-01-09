@@ -96,16 +96,16 @@ export class CVGPlot extends Component {
       };
     } else if (this.props.active === "Intermediate") {
       this.arrow_size = 3;
-      this.style = { width: "100%" };
+      this.style = { width: "100%", paddingBottom: "100%" };
       this.x_size = 650;
-      this.y_size = 650;
+      this.y_size = 825;
       this.rg_label = [1.35, 1.3];
       this.rf_label = [-1.35, 1.3];
       this.duv_label = [1.2, -1.25];
       this.cct_label = [-1.2, -1.25];
     } else {
       this.arrow_size = 3;
-      this.style = { width: "100%" };
+      this.style = { width: "100%", paddingBottom: "100%" };
       this.x_size = 800;
       this.y_size = 800;
       this.rg_label = [1.35, 1.3];
@@ -623,7 +623,7 @@ export class CVGPlot extends Component {
               showlegend: false,
               autosize: true,
               //width: this.x_size,
-              height: this.y_size,
+              //height: width;
 
               margin: {
                 t: 0,

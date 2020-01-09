@@ -42,6 +42,7 @@ export class CIEPlot extends Component {
     this.y_label = this.props.y_label; //Passed in from calling the component, label 'y' if you want the (CIE 1931) Plot
     this.test_source = this.props.test_source; //The test source point (An ordered pair) can be found in the returned Data from C code
     this.reference_illuminant = this.props.reference_illuminant; //The reference illuminant point (An ordered pair) can be found in the returned Data from C code
+    this.style = { width: "100%" };
     var i;
 
     /**
@@ -74,6 +75,7 @@ export class CIEPlot extends Component {
     return (
       <div style={{ position: "inherit", display: "inline-block" }}>
         <Plot
+          style={this.style}
           data={[
             {
               name: "Spectrum",
@@ -111,7 +113,7 @@ export class CIEPlot extends Component {
             }
           ]}
           layout={{
-            width: 500,
+            //width: 500,
             height: 400,
             margin: {
               l: 60,

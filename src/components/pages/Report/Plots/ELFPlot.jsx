@@ -34,9 +34,15 @@ export class ELFPlot extends Component {
     this.spd_test = this.props.test;
     this.spd_ref = this.props.ref_spd;
     this.caption = this.props.caption;
+    this.small = this.props.small;
+    if (this.small) {
+      this.style = { width: "100%" };
+    } else {
+      this.style = { width: "100%", paddingBottom: "50%" };
+    }
     this.small_style = {
-      position: "inherit",
-      display: "inline-block"
+      //position: "inherit",
+      //display: "inline-block"
     };
     var i;
     /**
@@ -46,7 +52,6 @@ export class ELFPlot extends Component {
      * TODO - Will have to change this once we implement Linear interpolation.
      */
     this.wavelength = this.props.wavelengths;
-    console.log(this.wavelength);
     //for (i = 0; i < 400; i++) {
     //  this.wavelength[i] = i + 380;
     //}
@@ -59,7 +64,7 @@ export class ELFPlot extends Component {
       <div style={this.small_style}>
         <Plot
           useResizeHandler={true}
-          style={{ width: "100%" }}
+          style={this.style}
           data={[
             {
               name: "Test",
@@ -82,7 +87,7 @@ export class ELFPlot extends Component {
           ]}
           layout={{
             //width: 800,
-            height: 400,
+            //height: 400,
             legend: {
               xanchor: "center",
               yanchor: "top",
@@ -106,7 +111,7 @@ export class ELFPlot extends Component {
             },
             yaxis: {
               title: {
-                text: "Radiant Power (Equal Luminous Flux)"
+                text: "Radiant Power <br /> (Equal Luminous Flux)"
               },
               tickformat: "",
               showticklabels: false

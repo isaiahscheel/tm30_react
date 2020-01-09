@@ -35,15 +35,17 @@ export class LHSPlot extends Component {
      * tab in the report page.
      */
     if (this.long) {
-      this.width = 800;
+      this.width = 1600;
       this.height = 400;
       this.bar_gap = 5;
     } else if (this.intermediate) {
-      this.width = 550;
-      this.height = 325;
+      this.style = { width: "100%", paddingBottom: "50%" };
+      //this.width = 550;
+      //this.height = 412;
     } else {
-      this.width = 550;
-      this.height = 400;
+      this.style = { width: "100%", paddingBottom: "50%" };
+      //this.width = 550;
+      //this.height = 400;
       this.bar_gap = 0;
     }
 
@@ -99,7 +101,7 @@ export class LHSPlot extends Component {
     return (
       <Plot
         useResizeHandler={true}
-        style={{ width: "100%" }}
+        style={this.style}
         title={null}
         data={[
           {
@@ -111,7 +113,7 @@ export class LHSPlot extends Component {
               color: this.bar_colors
             },
             textfont: {
-              size: 18
+              size: 14
             },
             text: this.y_rounded,
             textangle: "-90",
@@ -136,7 +138,7 @@ export class LHSPlot extends Component {
             tickmode: "linear"
           },
           yaxis: {
-            range: [-0.6, 0.6],
+            range: [-0.4, 0.4],
             title: {
               text: "Local Hue Shift (<i>R</i><sub>hs,h<i>j</i></sub>)",
               font: {

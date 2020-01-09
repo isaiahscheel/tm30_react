@@ -91,7 +91,10 @@ class Examples extends React.Component {
          * Call to the API with the Example SPD Information.
          */
         axios
+          //.post("http://lampprod03.pnl.gov:8081/api/tm30Paste", {
           .post("https://rcdemo.pnnl.gov/api/tm30Paste", {
+            //.post("https://lampprod03.pnl.gov/api/tm30Paste", {
+            //.post("http://localhost:5000/api/tm30Paste", {
             spd: exSpd,
             wavelength: wavelength
           })

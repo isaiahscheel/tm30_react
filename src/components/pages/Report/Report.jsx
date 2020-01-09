@@ -265,16 +265,20 @@ class Report extends React.Component {
               height: this.state.height - 300
             }}
           >
-            <br />
-            <Card>
-              <h2>No data Calculated</h2>
+            <Grid>
+              <Row>
+                <br />
+                <Card>
+                  <h2>No data Calculated</h2>
 
-              <ol>
-                <li>Click on Calculator above</li> <br />
-                <li>Choose which way to calculate data</li> <br />
-                <li>Click Calculate and you will be redirected here</li>
-              </ol>
-            </Card>
+                  <ol>
+                    <li>Click on Calculator above</li> <br />
+                    <li>Choose which way to calculate data</li> <br />
+                    <li>Click Calculate and you will be redirected here</li>
+                  </ol>
+                </Card>
+              </Row>
+            </Grid>
           </div>
         )}
         {!(this.props.location.state == null) ? (

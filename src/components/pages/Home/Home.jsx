@@ -101,7 +101,7 @@ const Home = () => {
                   parameters, click "Calculate" to initiate the calculation.
                 </li>
                 <li>
-                  <b>Important - This web app actually can't do this yet </b>
+                  <b>Important - This web app can't do this yet </b>
                   This web app can calculate display values for color samples to
                   illustrate the effect of the test source relative to the
                   reference illuminant. These visualizations increase the
@@ -135,8 +135,8 @@ const Home = () => {
               is up to the user.
             </li>
             <li>
-              <b>Important - This web app actually can't do this yet </b> -
-              Three libraries of SPDs are included in this workbook. SPDs may be
+              <b>Important - This web app can't do this yet </b> - Three
+              libraries of SPDs are included in this workbook. SPDs may be
               stored in the "User SPDs" library for recall via the main
               calculation, or to be calculated as a group (numerical results
               only). New SPDs can be added by to the library by adding the
@@ -157,11 +157,11 @@ const Home = () => {
               sample for use in analyses.
             </li>
             <li>
-              <b>Important - This web app actually can't do this yet </b> - The
-              "Multiple Calculator" sheet allows for simultaneous calculation of
-              a large number of SPDs from any of the three libraries. It
-              provides numerical results only. Calculating large numbers of SPDs
-              may require considerable time.
+              <b>Important - This web app can't do this yet </b> - The "Multiple
+              Calculator" sheet allows for simultaneous calculation of a large
+              number of SPDs from any of the three libraries. It provides
+              numerical results only. Calculating large numbers of SPDs may
+              require considerable time.
             </li>
             <li>
               <b>Important - Not Needed for web app </b> - The sheets not

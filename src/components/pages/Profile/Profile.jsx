@@ -1,4 +1,11 @@
 import React, { Component } from "react";
+import Card from "pnnl-react-core/lib/Card";
+import Grid from "react-bootstrap/es/Grid";
+import Row from "react-bootstrap/es/Row";
+import Col from "react-bootstrap/es/Col";
+import Profpic from "react-rounded-image";
+import MyPhoto from "./light.jpg";
+import Button from "react-bootstrap/es/Button";
 
 export class Profile extends Component {
   constructor(props) {
@@ -27,7 +34,48 @@ export class Profile extends Component {
         style={{
           height: this.state.height - 300
         }}
-      ></div>
+      >
+        <Grid>
+          <br />
+
+          <Card>
+            <Row align="center">
+              <br />
+              <img
+                style={{
+                  borderRadius: "50%",
+                  width: "10%"
+                }}
+                src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                alt="Profile"
+              />
+              <br />
+              <h3>First Last</h3>
+            </Row>
+            <Row>
+              <Col md={6} align="center">
+                <select>
+                  <option value="">Saved SPDs</option>
+                  <option value="">CIE F1 March 9, 2019</option>
+                  <option value="">BBR Dec 12, 2019</option>
+                  <option value="">E1C1 June 1, 2019</option>
+                </select>
+              </Col>
+              <Col md={6} align="center">
+                <select>
+                  <option value="">User SPDs</option>
+                </select>
+              </Col>
+            </Row>
+            <br />
+            <br />
+            <br />
+            <Row align="center">
+              <Button>Sign Out</Button>
+            </Row>
+          </Card>
+        </Grid>
+      </div>
     );
   }
 }

@@ -26,6 +26,7 @@ const Home = () => {
    */
   return (
     <div>
+      {console.log("version 1.4")}
       <Grid className="home-container">
         <br />
         <br />

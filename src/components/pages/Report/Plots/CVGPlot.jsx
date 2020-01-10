@@ -59,14 +59,31 @@ export class CVGPlot extends Component {
     super(props);
     this.state = {};
     this.xtest = this.props.xtest; //x tests values
-    this.xtest.push(this.xtest[0]); //Make it completely round
     this.ytest = this.props.ytest; //y tests values
-    this.ytest.push(this.ytest[0]); //Make it completely round
 
     this.xref = this.props.xref; //x Ref values
-    this.xref.push(this.xref[0]); //Make it completely round
     this.yref = this.props.yref; //x Ref values
-    this.yref.push(this.yref[0]); //Make it completely round
+
+    /**
+     * Put these in an if statement or else everytime
+     * the CVG plot was drawn another point was added
+     * to the end of the data arrays
+     */
+    if (this.xtest.length === 16) {
+      this.xtest.push(this.xtest[0]); //Make it completely round
+      this.ytest.push(this.ytest[0]); //Make it completely round
+      this.xref.push(this.xref[0]); //Make it completely round
+      this.yref.push(this.yref[0]); //Make it completely round
+    }
+
+    /**
+     * Some data from the JSON file, used for the hovertext
+     */
+    this.lcs = this.props.lcs;
+    this.lhs = this.props.lhs;
+    this.lcf = this.props.lcf;
+    //Used to store the text of the hovertext
+    this.text = [];
 
     /**
      * Rounding the information on the graph
@@ -177,7 +194,19 @@ export class CVGPlot extends Component {
           this.yref[i] = this.ytest[i] - 0.04;
         }
       }
+
+      this.text[i] = `<i>R</i><sub>cs,h${i + 1}</sub>: ${this.lcs[i].toFixed(
+        2
+      )} <br /><i>R</i><sub>hs,h${i + 1}</sub>: ${this.lhs[i].toFixed(
+        2
+      )} <br /><i>R</i><sub>f,h${i + 1}</sub>: ${this.lcf[i].toFixed(2)}`;
     }
+
+    this.text[16] = `<i>R</i><sub>cs,h${1}</sub>: ${this.lcs[0].toFixed(
+      2
+    )} <br /><i>R</i><sub>hs,h${1}</sub>: ${this.lhs[0].toFixed(
+      2
+    )} <br /><i>R</i><sub>f,h${1}</sub>: ${this.lcf[0].toFixed(2)}`;
 
     /**
      * An array of the vector colors
@@ -596,7 +625,9 @@ export class CVGPlot extends Component {
                 hoverinfo: "skip"
               },
               {
-                name: "Test",
+                text: this.text,
+                customdata: this.text,
+                name: "",
                 x: this.xtest,
                 y: this.ytest,
                 type: "scatter",
@@ -604,7 +635,7 @@ export class CVGPlot extends Component {
                 mode: "lines+points",
                 connectgaps: true,
                 marker: { color: "red" },
-                hovertemplate: `%{y:.2f}`
+                hovertemplate: "%{customdata}"
               },
               {
                 /*
@@ -621,7 +652,9 @@ export class CVGPlot extends Component {
             ]}
             layout={{
               showlegend: false,
+              hoverlabel: { bgcolor: "#FFF" },
               autosize: true,
+              hovermode: "closest",
               //width: this.x_size,
               //height: width;
 

@@ -158,6 +158,9 @@ export class Graphical extends Component {
                   rg={this.tm30.rf}
                   cct={this.tm30.CCT[0]}
                   duv={this.tm30.DUV[0]}
+                  lcs={this.tm30.local_chroma_shift}
+                  lhs={this.tm30.local_hue_shift}
+                  lcf={this.tm30.local_color_fidelity}
                   small={true}
                   options={this.state.options}
                 />

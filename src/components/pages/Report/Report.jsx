@@ -556,6 +556,18 @@ class Report extends React.Component {
                             this.props.location.state.data.tm30
                               .Numerical_Results.DUV[0]
                           }
+                          lcs={
+                            this.props.location.state.data.tm30
+                              .Numerical_Results.local_chroma_shift
+                          }
+                          lhs={
+                            this.props.location.state.data.tm30
+                              .Numerical_Results.local_hue_shift
+                          }
+                          lcf={
+                            this.props.location.state.data.tm30
+                              .Numerical_Results.local_color_fidelity
+                          }
                         ></CVGPlot>
                       </div>
                     </Card>

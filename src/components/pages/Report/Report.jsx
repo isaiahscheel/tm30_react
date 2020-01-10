@@ -189,8 +189,7 @@ class Report extends React.Component {
       var name = `${this.name}-${this.state.active}.png`;
       var fileDownload = require("js-file-download");
       htmlToImage
-        //.toBlob(document.getElementById(`${this.state.active}-print`))
-        .toBlob(document.getElementById(`Intermediate`))
+        .toBlob(document.getElementById(`${this.state.active}`))
         .then(function(dataUrl) {
           fileDownload(dataUrl, name);
         });

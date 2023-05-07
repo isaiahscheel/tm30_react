@@ -13,7 +13,7 @@
     "html-to-image": "^0.1.1",
     "js-file-download": "^0.4.8",
     "material-ui-icons": "^1.0.0-beta.36",
-    "plotly.js": "^1.51.1",
+    "plotly.js": "^1.58.5",
     "pnnl-react-core": "^2.0.0",
     "pnnl-theme-core": "^1.0.0",
     "prop-types": "^15.6.2",
